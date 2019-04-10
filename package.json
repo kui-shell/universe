@@ -1,5 +1,5 @@
 {
-  "name": "nickm",
+  "name": "@kui-shell/universe",
   "version": "1.0.0",
   "description": "A [Kui](https://github.com/IBM/kui) module that includes all of the Kui components.",
   "main": "",
