@@ -1,14 +1,14 @@
 {
   "name": "nickm",
   "version": "1.0.0",
-  "description": "",
-  "main": "xterm.js",
+  "description": "A [Kui](https://github.com/IBM/kui) module that includes all of the Kui components.",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["Kui", "electron", "kubernetes", "command line", "CLI", "visualizations"],
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@kui-shell/builder": "^0.25.0"
   },
