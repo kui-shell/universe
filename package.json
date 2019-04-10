@@ -1,0 +1,29 @@
+{
+  "name": "nickm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "xterm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@kui-shell/builder": "^0.25.0"
+  },
+  "dependencies": {
+    "@kui-shell/core": "^2.25.0",
+    "@kui-shell/plugin-apache-composer": "^0.30.0",
+    "@kui-shell/plugin-bash-like": "^0.14.0",
+    "@kui-shell/plugin-core-support": "^0.25.0",
+    "@kui-shell/plugin-editor": "^0.14.0",
+    "@kui-shell/plugin-grid": "^0.14.0",
+    "@kui-shell/plugin-k8s": "^0.25.0",
+    "@kui-shell/plugin-openwhisk": "^0.25.0",
+    "@kui-shell/plugin-openwhisk-editor-extensions": "0.0.24",
+    "@kui-shell/plugin-tutorials": "^0.25.0",
+    "@kui-shell/plugin-wrk": "^0.11.0",
+    "@kui-shell/plugin-wskflow": "^0.14.0"
+  }
+}
