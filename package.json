@@ -1,29 +1,42 @@
 {
-  "name": "@kui-shell/universe",
+  "name": "kubectl-kui",
   "version": "1.0.0",
-  "description": "A [Kui](https://github.com/IBM/kui) module that includes all of the Kui components.",
-  "main": "",
+  "description": "",
+  "main": "node_modules/@kui-shell/core/main/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "mac": "PLATFORM=mac NO_INSTALLER=true kui-build-electron",
+    "postinstall": "kui-compile && KUI_STAGE=$(cd . && pwd) CLIENT_HOME=$(cd . && pwd) node node_modules/@kui-shell/builder/lib/configure.js && (cd packages/app/build && rm -rf css && mkdir css && cd css && for i in ../../../../node_modules/@kui-shell/core/web/css/*; do ln -s $i; done && for i in ../../../../theme/css/*; do ln -s $i; done)",
+    "test": "echo \"for now, we are only testing npm install\""
   },
-  "keywords": ["Kui", "electron", "kubernetes", "command line", "CLI", "visualizations"],
+  "repository": {
+    "type": "git",
+    "url": "git@github.ibm.com:nickm/kubectl-kui.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@kui-shell/builder": "^0.25.0"
+    "@kui-shell/builder": "^4.4.1-dev.4543.31",
+    "@types/mocha": "5.2.7",
+    "@types/node": "12.7.5",
+    "electron": "6.0.8",
+    "mocha": "6.2.0",
+    "spectron": "8.0.0",
+    "typescript": "3.6.3"
   },
   "dependencies": {
-    "@kui-shell/core": "^2.25.0",
-    "@kui-shell/plugin-apache-composer": "^0.30.0",
-    "@kui-shell/plugin-bash-like": "^0.14.0",
-    "@kui-shell/plugin-core-support": "^0.25.0",
-    "@kui-shell/plugin-editor": "^0.14.0",
-    "@kui-shell/plugin-grid": "^0.14.0",
-    "@kui-shell/plugin-k8s": "^0.25.0",
-    "@kui-shell/plugin-openwhisk": "^0.25.0",
-    "@kui-shell/plugin-openwhisk-editor-extensions": "0.0.24",
-    "@kui-shell/plugin-tutorials": "^0.25.0",
-    "@kui-shell/plugin-wrk": "^0.11.0",
-    "@kui-shell/plugin-wskflow": "^0.14.0"
+    "@kui-shell/core": "^4.4.1-dev.4537.28",
+    "@kui-shell/plugin-apache-composer": "^4.3.0-dev.4410.6",
+    "@kui-shell/plugin-bash-like": "^4.4.1-dev.4516.22",
+    "@kui-shell/plugin-core-support": "^4.4.1-dev.4545.32",
+    "@kui-shell/plugin-editor": "^4.3.0-dev.4410.6",
+    "@kui-shell/plugin-grid": "^4.3.0-dev.4410.6",
+    "@kui-shell/plugin-k8s": "^4.4.1-dev.4537.28",
+    "@kui-shell/plugin-openwhisk": "^4.4.1-dev.4545.32",
+    "@kui-shell/plugin-openwhisk-editor-extensions": "^4.3.0-dev.4410.6",
+    "@kui-shell/plugin-operator-framework": "^4.3.0-dev.4410.6",
+    "@kui-shell/plugin-tekton": "^4.4.1-dev.4498.18",
+    "@kui-shell/plugin-tutorials": "^4.3.0-dev.4410.6",
+    "@kui-shell/plugin-wskflow": "^4.3.0-dev.4410.6"
   }
 }
