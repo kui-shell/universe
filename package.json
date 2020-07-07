@@ -19,7 +19,7 @@
     "@kui-shell/builder": "^4.4.1-dev.4543.31",
     "@types/mocha": "5.2.7",
     "@types/node": "12.7.5",
-    "electron": "6.0.8",
+    "electron": "7.2.4",
     "mocha": "6.2.0",
     "spectron": "8.0.0",
     "typescript": "3.6.3"
